@@ -7,7 +7,7 @@
   <title>Logistics JN</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@800&family=Public+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Exo+2:wght@800&family=Public+Sans:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root {
       color-scheme: light;
@@ -69,10 +69,24 @@
       top: clamp(14px, 2.5vw, 26px);
       left: clamp(16px, 2.5vw, 30px);
       display: block;
-      width: clamp(72px, 6vw, 88px);
+      width: clamp(68px, 5.8vw, 82px);
       height: auto;
       mix-blend-mode: screen;
       pointer-events: none;
+    }
+
+    .headline-logo {
+      display: block;
+      width: clamp(180px, 22vw, 300px);
+      max-width: min(64vw, 300px);
+      height: auto;
+      margin: 0 auto;
+      mask-image: url("jn-logo.png");
+      mask-mode: luminance;
+      mask-repeat: no-repeat;
+      mask-size: 100% 100%;
+      filter: drop-shadow(0 calc(12 * var(--u)) calc(32 * var(--u)) rgb(0 0 0 / 50%));
+      transform: translateX(-2.3%);
     }
 
     .scene::after {
@@ -435,15 +449,14 @@
       <div class="scene">
         <video id="hero-video" muted playsinline preload="auto"
           poster="https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/5e018553-cb8a-420a-819f-fcdfa08e5df0.jpg" aria-hidden="true"></video>
-        <img class="scene-logo" src="jn-logo.png" alt="JN Logistics logo">
+        <img class="scene-logo" src="jn-logo.png" alt="" aria-hidden="true">
       </div>
 
       <div class="content" id="content">
         <header class="intro">
           <p class="eyebrow">Why us</p>
           <h1 class="headline">
-            <span>Logistics</span>
-            <span>JN</span>
+            <img class="headline-logo" src="jn-logo.png" alt="JN Logistics">
           </h1>
         </header>
 
